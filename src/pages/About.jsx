@@ -1,5 +1,11 @@
+import Banner from '../components/Banner'
+
 const About = () => {
-  return
+  return (
+    <div className="container">
+      <Banner />
+    </div>
+  )
 }
 
 export default About
