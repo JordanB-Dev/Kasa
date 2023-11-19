@@ -1,0 +1,66 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 40px auto;
+
+  & img {
+    width: 210px;
+  }
+
+  & .logo {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.menu {
+  position: relative;
+  top: 20px;
+  color: $color-1;
+  font-size: 1.5rem;
+  font-weight: 500;
+  list-style-type: none;
+  display: flex;
+  gap: 50px;
+
+  & a {
+    text-decoration: none;
+    color: $color-1;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  & :active {
+    text-decoration: underline;
+  }
+}
+
+@include breakpoints(700) {
+  .header {
+    margin: 20px auto;
+
+    & img {
+      width: 145px;
+    }
+  }
+
+  .menu {
+    top: 15px;
+    font-size: 1.2rem;
+    gap: 15px;
+  }
+}
+
+@include breakpoints(400) {
+  .header img {
+    width: 100px;
+  }
+
+  .menu {
+    top: 10px;
+    font-size: 0.8rem;
+    gap: 10px;
+  }
+}
