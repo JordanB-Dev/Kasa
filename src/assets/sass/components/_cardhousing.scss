@@ -1,0 +1,28 @@
+.housing_list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 340px;
+  grid-template-rows: 1fr 1fr 1fr 340px;
+  margin: 43px auto 43px auto;
+  padding: 50px;
+  gap: 60px;
+  border-radius: 25px;
+  width: auto;
+  justify-content: center;
+  background-color: #f7f7f7;
+}
+
+@include breakpoints(1239) {
+  .housing_list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@include breakpoints(850) {
+  .housing_list {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    margin: 20px auto 20px auto;
+    padding: 0px;
+    gap: 20px;
+  }
+}
