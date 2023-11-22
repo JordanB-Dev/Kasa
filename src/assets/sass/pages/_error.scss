@@ -1,0 +1,38 @@
+.error_page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  color: #ff6060;
+  min-height: calc(100vh - 336px);
+
+  &_fourCent {
+    font-size: 288px;
+    line-height: 136px;
+  }
+
+  &_notFound {
+    font-size: 36px;
+  }
+
+  &_link {
+    font-size: 18px;
+    color: $color-1;
+  }
+}
+
+@include breakpoints(850) {
+  .error_page {
+    margin-bottom: 51px;
+    &_fourCent {
+      font-size: 96px;
+    }
+    &_notFound {
+      font-size: 18px;
+    }
+    &_link {
+      font-size: 14px;
+    }
+  }
+}
