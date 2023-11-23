@@ -1,5 +1,6 @@
 import Tags from '../Tags'
 import Host from '../Host'
+import Rating from '../Rating'
 
 const AccommodationInfo = ({ data }) => {
   const { title, location } = data
@@ -17,6 +18,7 @@ const AccommodationInfo = ({ data }) => {
       </div>
       <div className="accommodation_info_right">
         <Host data={data} />
+        <Rating data={data} />
       </div>
     </div>
   )
