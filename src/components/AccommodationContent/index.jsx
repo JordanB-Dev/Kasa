@@ -1,3 +1,4 @@
+import AccommodationInfo from '../AccommodationInfo'
 import DropDown from '../Dropdown'
 
 const AccommodationContent = ({ data }) => {
@@ -9,6 +10,7 @@ const AccommodationContent = ({ data }) => {
 
   return (
     <div className="accommodation_content container">
+      <AccommodationInfo data={data} />
       <div className="dropdown_section">
         <DropDown description={description} title="Description" />
         <DropDown title="Équipements" description={equipementsDropDown} />
