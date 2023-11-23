@@ -1,5 +1,5 @@
-import { useLocation } from 'react-router-dom'
 import { Fragment } from 'react'
+import { useLocation } from 'react-router-dom'
 import accommodation from '../assets/data/data.json'
 import AccommodationContent from '../components/AccommodationContent'
 import Error from './Error'

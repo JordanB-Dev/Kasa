@@ -18,10 +18,44 @@
     font-weight: normal;
   }
 
+  &_container_right {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 0;
+    align-items: center;
+    margin-top: 0px;
+  }
+
   & .tag_list {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 20px;
+  }
+}
+
+@include breakpoints(650) {
+  .accommodation_info {
+    flex-direction: column;
+
+    &_container_left {
+      font-size: 14px;
+    }
+
+    &_container_left h2 {
+      font-size: 18px;
+    }
+
+    &_container_right {
+      width: 100%;
+      flex-direction: row-reverse;
+      margin-top: 10px;
+    }
+
+    & .tag_list {
+      margin-top: 10px;
+    }
   }
 }

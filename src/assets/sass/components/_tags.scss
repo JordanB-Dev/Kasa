@@ -1,0 +1,22 @@
+.tag {
+  display: flex;
+  min-width: 115px;
+  padding: 5px 22px 5px 22px;
+  height: 25px;
+  background-color: $color-red;
+  color: $white;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+@include breakpoints(650) {
+  .tag {
+    display: flex;
+    min-width: 70px;
+    padding: 2px 10px 2px 10px;
+    border-radius: 10px;
+    font-size: 10px;
+  }
+}
