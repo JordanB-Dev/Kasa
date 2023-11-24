@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import arrow from '../../assets/images/icons/fleche.svg'
 
-const DropDown = ({ title, description }) => {
+const DropDown = ({ title, description, children }) => {
   const [open, setOpen] = useState(false)
 
   return (
@@ -16,7 +16,12 @@ const DropDown = ({ title, description }) => {
           <img src={arrow} alt="Ouvrir cette liste" />
         </a>
       </div>
-      {open && <div className="dropdown_description">{description}</div>}
+      {open && (
+        <div className="dropdown_description">
+          {description}
+          {children}
+        </div>
+      )}
     </div>
   )
 }
