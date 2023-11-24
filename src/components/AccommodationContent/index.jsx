@@ -2,17 +2,17 @@ import AccommodationInfo from '../AccommodationInfo'
 import DropDown from '../Dropdown'
 import Gallery from '../Gallery'
 
-const AccommodationContent = ({ data }) => {
-  const { pictures, description } = data
+const AccommodationContent = ({ apartment }) => {
+  const { pictures, description } = apartment
 
   return (
     <div className="accommodation_content container">
       <Gallery pictures={pictures} />
-      <AccommodationInfo data={data} />
+      <AccommodationInfo apartment={apartment} />
       <div className="dropdown_section">
         <DropDown description={description} title="Description" />
         <DropDown title="Équipements">
-          {data?.equipments.map((equipment, index) => (
+          {apartment?.equipments.map((equipment, index) => (
             <li key={index}>{equipment}</li>
           ))}
         </DropDown>

@@ -1,6 +1,4 @@
-const Host = ({ data }) => {
-  const { host } = data
-
+const Host = ({ host }) => {
   return (
     <div className="host">
       <img className="host_img" src={host.picture} alt={host.name} />

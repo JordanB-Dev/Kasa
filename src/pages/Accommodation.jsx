@@ -10,7 +10,7 @@ const Accommodation = () => {
     (accommodation) => accommodation.id === idaccommodation,
   )
 
-  return <>{data ? <AccommodationContent data={data} /> : <Error />}</>
+  return <>{data ? <AccommodationContent apartment={data} /> : <Error />}</>
 }
 
 export default Accommodation
