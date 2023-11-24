@@ -1,6 +1,7 @@
 .header {
   display: flex;
   justify-content: space-between;
+  text-align: center;
   width: 90%;
   margin: 40px auto;
 
@@ -53,11 +54,12 @@
 @include breakpoints(400) {
   .header img {
     width: 100px;
+    height: 46.88px;
   }
 
   .menu {
-    top: 10px;
+    top: 13px;
     font-size: 0.8rem;
-    gap: 10px;
+    gap: 26px;
   }
 }

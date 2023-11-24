@@ -53,6 +53,7 @@
 @include breakpoints(500) {
   .housing {
     width: calc(100vw - 35px);
+    width: 335px;
     height: 255px;
   }
 }

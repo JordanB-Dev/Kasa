@@ -3,7 +3,7 @@
   position: relative;
   overflow: hidden;
   border-radius: 25px;
-  height: 228px;
+  height: 223px;
   width: calc(100% + 20px);
 
   & img {
@@ -64,7 +64,8 @@
 @include breakpoints(700) {
   .banner {
     border-radius: 21px;
-    height: 160px;
+    width: 335px;
+    height: 111px;
 
     &_title {
       font-size: 1.9rem;
