@@ -20,6 +20,20 @@ const Gallery = ({ pictures }) => {
     return () => window.removeEventListener('resize', handleResize)
   })
 
+  const keyCodeLightBox = (e) => {
+    if (e.keyCode === 37) {
+      e.preventDefault()
+      handleClickPrevious()
+    }
+
+    if (e.keyCode === 39) {
+      e.preventDefault()
+      handleClickNext()
+    }
+  }
+
+  document.addEventListener('keydown', keyCodeLightBox)
+
   const handleClickPrevious = () => {
     setTransitionTime(0.8)
     position === 1 ? setPosition(pictures.length) : setPosition(position - 1)
@@ -35,8 +49,9 @@ const Gallery = ({ pictures }) => {
       {pictures.length > 1 && (
         <img
           src={ArrowLeft}
+          tabindex="5"
           className="gallery_arrowLeft"
-          onClick={() => handleClickPrevious()}
+          onClick={handleClickPrevious}
         />
       )}
 
@@ -61,8 +76,9 @@ const Gallery = ({ pictures }) => {
       {pictures.length > 1 && (
         <img
           src={ArrowRight}
+          tabindex="4"
           className="gallery_arrowRight"
-          onClick={() => handleClickNext()}
+          onClick={handleClickNext}
         />
       )}
     </div>

@@ -7,12 +7,12 @@ const Header = () => {
     <nav className="header container">
       <div className="logo">
         <Link to="/">
-          <img src={logo} alt="logo" />
+          <img src={logo} tabindex="1" alt="logo" />
         </Link>
       </div>
 
       <ul className="menu">
-        <li>
+        <li tabindex="2">
           <NavLink
             to="/"
             className={({ isActive }) => (isActive ? 'active' : '')}
@@ -20,7 +20,7 @@ const Header = () => {
             Accueil
           </NavLink>
         </li>
-        <li>
+        <li tabindex="3">
           <NavLink
             to="/about"
             className={({ isActive }) => (isActive ? 'active' : '')}
