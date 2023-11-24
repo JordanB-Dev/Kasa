@@ -1,10 +1,15 @@
 import Banner from '../components/Banner'
+import bannerAbout from '../assets/images/about.png'
 import DropDown from '../components/Dropdown'
 
 const About = () => {
   return (
     <div className="container">
-      <Banner />
+      <Banner
+        src={bannerAbout}
+        alt="Un paysage de montagnes"
+        aria="Banner about"
+      />
       <div className="about">
         <DropDown
           title="Fiabilité"

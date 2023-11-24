@@ -1,24 +1,9 @@
-import bannerHome from '../../assets/images/home.png'
-import bannerAbout from '../../assets/images/about.png'
-
-const Banner = ({ name }) => {
+const Banner = ({ src, title, alt, aria }) => {
   return (
     <div className="banner container">
-      {name === 'Home' ? (
-        <img
-          src={bannerHome}
-          aria-label="Banner home"
-          alt="Un paysage de falaises"
-        />
-      ) : (
-        <img
-          src={bannerAbout}
-          aria-label="Banner about"
-          alt="Un paysage de montagnes"
-        />
-      )}
+      <img src={src} aria-label={aria} alt={alt} />
       <h1 className="banner_title" aria-label="Title banner">
-        {name === 'Home' ? 'Chez vous, partout et ailleurs' : ''}
+        {title}
       </h1>
     </div>
   )
