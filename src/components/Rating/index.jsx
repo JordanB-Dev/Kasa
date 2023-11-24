@@ -1,37 +1,21 @@
 import StarImg from '../../assets/images/star.png'
 import EmptyStar from '../../assets/images/emptystar.png'
 
-const Rating = ({ data }) => {
-  const { rating } = data
+const Rating = ({ rating }) => {
+  const stars = [...Array(5).keys()]
 
-  const accommodation = []
-  let star = true
-  for (let index = 0; index < 5; index++) {
-    if (index === parseInt(rating)) {
-      star = false
-    }
-    if (star === true) {
-      accommodation.push(
+  return (
+    <div className="rating">
+      {stars.map((starIndex, index) => (
         <img
           key={index}
           className="star"
-          src={StarImg}
-          alt={`${data?.rating}/5`}
-        />,
-      )
-    } else {
-      accommodation.push(
-        <img
-          key={index}
-          className="star"
-          src={EmptyStar}
-          alt={`${data?.rating}/5`}
-        />,
-      )
-    }
-  }
-
-  return <div className="rating">{accommodation}</div>
+          src={starIndex < parseInt(rating) ? StarImg : EmptyStar}
+          alt={`${rating}/5`}
+        />
+      ))}
+    </div>
+  )
 }
 
 export default Rating

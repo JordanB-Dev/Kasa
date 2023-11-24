@@ -22,7 +22,7 @@ const AccommodationInfo = ({ apartment }) => {
       </div>
       <div className="accommodation_info_right">
         <Host host={apartment.host} />
-        <Rating data={apartment} />
+        <Rating rating={apartment.rating} />
       </div>
     </div>
   )
