@@ -1,7 +1,11 @@
 import StarImg from '../../assets/images/star.png'
 import EmptyStar from '../../assets/images/emptystar.png'
 
-const Rating = ({ rating }) => {
+type Props = {
+  rating: string
+}
+
+const Rating: React.FC<Props> = ({ rating }) => {
   const stars = [...Array(5).keys()]
 
   return (
