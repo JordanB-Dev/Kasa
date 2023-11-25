@@ -2,15 +2,21 @@ import { createRef, useEffect, useState } from 'react'
 import ArrowLeft from '../../assets/images/icons/chevron-left.svg'
 import ArrowRight from '../../assets/images/icons/chevron-right.svg'
 
-const Gallery = ({ pictures }) => {
-  const galleryRef = createRef()
-  const [position, setPosition] = useState(1)
-  const [width, setWidth] = useState(0)
-  const [transitionTime, setTransitionTime] = useState(0)
+type Props = {
+  pictures: string[]
+}
+
+const Gallery: React.FC<Props> = ({ pictures }) => {
+  const galleryRef = createRef<HTMLDivElement>()
+  const [position, setPosition] = useState<number>(1)
+  const [width, setWidth] = useState<number>(0)
+  const [transitionTime, setTransitionTime] = useState<number>(0)
 
   function handleResize() {
     setTransitionTime(0)
-    setWidth(galleryRef.current.clientWidth)
+    if (galleryRef?.current?.clientWidth) {
+      setWidth(galleryRef.current.clientWidth)
+    }
   }
 
   useEffect(() => {
@@ -20,7 +26,10 @@ const Gallery = ({ pictures }) => {
     return () => window.removeEventListener('resize', handleResize)
   })
 
-  const keyCodeLightBox = (e) => {
+  const keyCodeLightBox = (e: {
+    keyCode: number
+    preventDefault: () => void
+  }) => {
     if (e.keyCode === 37) {
       e.preventDefault()
       handleClickPrevious()
