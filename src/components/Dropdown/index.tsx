@@ -1,8 +1,14 @@
-import { useState } from 'react'
+import { PropsWithChildren, useState } from 'react'
 import arrow from '../../assets/images/icons/fleche.svg'
 
-const DropDown = ({ title, description, children }) => {
-  const [open, setOpen] = useState(false)
+type Props = PropsWithChildren<{
+  title?: string
+  description?: string
+  aria?: string
+}>
+
+const DropDown: React.FC<Props> = ({ title, description, children }) => {
+  const [open, setOpen] = useState<boolean>(false)
 
   return (
     <div className="dropdown" id={`dropdown-${title}`}>
