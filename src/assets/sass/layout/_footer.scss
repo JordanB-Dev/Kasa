@@ -3,11 +3,11 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
   font-size: 24px;
   font-weight: 500;
   padding-top: 62px;
   padding-bottom: 62px;
-  justify-self: flex-end;
   width: 100%;
   height: calc(209px - 62px - 32px);
   background-color: $black;

@@ -52,11 +52,6 @@
 }
 
 @include breakpoints(400) {
-  .header img {
-    width: 100px;
-    height: 46.88px;
-  }
-
   .menu {
     top: 13px;
     font-size: 0.8rem;

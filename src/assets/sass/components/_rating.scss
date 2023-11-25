@@ -11,9 +11,12 @@
 
 @include breakpoints(650) {
   .rating {
-    margin-top: 0;
+    margin-top: 33px;
     grid-template-columns: repeat(5, 15px);
     gap: 5px;
+    justify-content: space-between;
+    justify-content: flex-start;
+    text-align: center;
 
     & img {
       width: 15px;

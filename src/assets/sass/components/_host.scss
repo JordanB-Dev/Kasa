@@ -21,3 +21,11 @@
     align-items: center;
   }
 }
+
+@include breakpoints(650) {
+  .host {
+    margin-top: 10px;
+    float: right;
+    width: 100px;
+  }
+}
