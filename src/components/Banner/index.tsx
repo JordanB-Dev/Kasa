@@ -1,4 +1,11 @@
-const Banner = ({ src, title, alt, aria }) => {
+type Props = {
+  src?: string
+  title?: string
+  alt?: string
+  aria?: string
+}
+
+const Banner: React.FC<Props> = ({ src, title, alt, aria }) => {
   return (
     <div className="banner container">
       <img src={src} aria-label={aria} alt={alt} />
