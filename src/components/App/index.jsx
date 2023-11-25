@@ -1,4 +1,3 @@
-import { Fragment } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Header from '../../layout/Header'
 import Home from '../../pages/Home'
@@ -9,7 +8,7 @@ import Accommodation from '../../pages/Accommodation'
 
 const App = () => {
   return (
-    <Fragment>
+    <>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -18,7 +17,7 @@ const App = () => {
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
-    </Fragment>
+    </>
   )
 }
 
