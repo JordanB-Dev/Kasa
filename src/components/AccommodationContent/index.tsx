@@ -7,6 +7,14 @@ type Props = {
     pictures: string[]
     description?: string
     equipments: string[]
+    title?: string
+    location?: string
+    tags: string[]
+    rating: string
+    host: {
+      name: string
+      picture: string
+    }
   }
 }
 
