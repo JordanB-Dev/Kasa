@@ -2,7 +2,20 @@ import Tags from '../Tags'
 import Host from '../Host'
 import Rating from '../Rating'
 
-const AccommodationInfo = ({ apartment }) => {
+type Props = {
+  apartment: {
+    title?: string
+    location?: string
+    tags: string[]
+    rating: string
+    host: {
+      name: string
+      picture: string
+    }
+  }
+}
+
+const AccommodationInfo: React.FC<Props> = ({ apartment }) => {
   const { title, location } = apartment
 
   return (
