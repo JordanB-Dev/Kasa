@@ -2,7 +2,15 @@ import AccommodationInfo from '../AccommodationInfo'
 import DropDown from '../Dropdown'
 import Gallery from '../Gallery'
 
-const AccommodationContent = ({ apartment }) => {
+type Props = {
+  apartment: {
+    pictures: string[]
+    description?: string
+    equipments: string[]
+  }
+}
+
+const AccommodationContent: React.FC<Props> = ({ apartment }) => {
   const { pictures, description } = apartment
 
   return (
