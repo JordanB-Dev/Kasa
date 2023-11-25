@@ -5,10 +5,6 @@ import Rating from '../Rating'
 const AccommodationInfo = ({ apartment }) => {
   const { title, location } = apartment
 
-  const tags = apartment?.tags.map((tags, index) => {
-    return <Tags key={index} tags={tags} />
-  })
-
   return (
     <div className="accommodation_info container">
       <div className="accommodation_info_left">

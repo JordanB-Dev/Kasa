@@ -49,7 +49,7 @@ const Gallery = ({ pictures }) => {
       {pictures.length > 1 && (
         <img
           src={ArrowLeft}
-          tabindex="5"
+          tabIndex="5"
           className="gallery_arrowLeft"
           onClick={handleClickPrevious}
         />
@@ -76,7 +76,7 @@ const Gallery = ({ pictures }) => {
       {pictures.length > 1 && (
         <img
           src={ArrowRight}
-          tabindex="4"
+          tabIndex="4"
           className="gallery_arrowRight"
           onClick={handleClickNext}
         />
