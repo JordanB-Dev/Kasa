@@ -1,4 +1,12 @@
-const Host = ({ host }) => {
+type Props = {
+  host: {
+    name?: string
+    picture?: string
+    id?: string
+  }
+}
+
+const Host: React.FC<Props> = ({ host }) => {
   return (
     <div className="host">
       <img className="host_img" src={host.picture} alt={host.name} />
