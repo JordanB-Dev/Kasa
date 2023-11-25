@@ -1,6 +1,12 @@
 import { NavLink } from 'react-router-dom'
 
-const Housing = ({ id, cover, title }) => {
+type Props = {
+  id?: string
+  title?: string
+  cover?: string
+}
+
+const Housing: React.FC<Props> = ({ id, cover, title }) => {
   return (
     <NavLink to={`/housing?id=${id}`} key={id} className="housing">
       <img src={cover} alt={title} aria-label={`Picture: ${title}`} />
