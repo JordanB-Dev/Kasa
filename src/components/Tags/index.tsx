@@ -1,5 +1,5 @@
 type Props = {
-  tags?: string
+  tags: string
 }
 
 const Tags: React.FC<Props> = ({ tags }) => {
