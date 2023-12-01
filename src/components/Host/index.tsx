@@ -1,7 +1,7 @@
 type Props = {
   host: {
-    name?: string
-    picture?: string
+    name: string
+    picture: string
     id?: string
   }
 }
