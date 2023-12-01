@@ -1,8 +1,8 @@
 type Props = {
-  src?: string
+  src: string
   title?: string
-  alt?: string
-  aria?: string
+  alt: string
+  aria: string
 }
 
 const Banner: React.FC<Props> = ({ src, title, alt, aria }) => {
