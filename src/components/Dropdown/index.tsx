@@ -2,7 +2,7 @@ import { PropsWithChildren, useState } from 'react'
 import arrow from '../../assets/images/icons/fleche.svg'
 
 type Props = PropsWithChildren<{
-  title?: string
+  title: string
   description?: string
   aria?: string
 }>
