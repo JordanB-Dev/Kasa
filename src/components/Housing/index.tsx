@@ -1,9 +1,9 @@
 import { NavLink } from 'react-router-dom'
 
 type Props = {
-  id?: string
-  title?: string
-  cover?: string
+  id: string
+  title: string
+  cover: string
 }
 
 const Housing: React.FC<Props> = ({ id, cover, title }) => {
