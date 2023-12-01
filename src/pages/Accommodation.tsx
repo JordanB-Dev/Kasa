@@ -6,11 +6,15 @@ import Error from './Error'
 const Accommodation = () => {
   const { search } = useLocation()
   const idaccommodation = new URLSearchParams(search).get('id')
-  const data = accommodation.find(
+  const apartments = accommodation.find(
     (accommodation) => accommodation.id === idaccommodation,
   )
 
-  return <>{data ? <AccommodationContent apartment={data} /> : <Error />}</>
+  return (
+    <>
+      {apartments ? <AccommodationContent apartment={apartments} /> : <Error />}
+    </>
+  )
 }
 
 export default Accommodation
