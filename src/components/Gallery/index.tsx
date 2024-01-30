@@ -78,9 +78,11 @@ const Gallery: React.FC<Props> = ({ pictures }) => {
         />
       ))}
 
-      <p className="gallery_counter">
-        {position}/{pictures.length}
-      </p>
+      {pictures.length > 1 && (
+        <p className="gallery_counter">
+          {position}/{pictures.length}
+        </p>
+      )}
 
       {pictures.length > 1 && (
         <img
